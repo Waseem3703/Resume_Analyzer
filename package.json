@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "install-all": "npm install && cd backend && npm install",
+    "build": "npm run build:vite",
+    "build:vite": "vite build",
+    "start": "cd backend && node index.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
