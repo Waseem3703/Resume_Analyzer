@@ -5,6 +5,8 @@ const pdfParse = require('pdf-parse');
 const mammoth = require('mammoth');
 const cors = require('cors');
 const path = require('path');
+import { __dirname } from 'path';
+
 
 const app = express();
 const PORT = 5000;
@@ -18,6 +20,10 @@ const upload = multer({ storage });
 
 // POST /api/upload-resume
 // Expects form-data with key: 'resume'
+
+// Serve static frontend files from root's dist folder
+app.use(express.static(path.join(__dirname, '../dist')));
+
 app.post('/api/upload-resume', upload.single('resume'), async (req, res) => {
     try {
         const file = req.file;
@@ -48,6 +54,10 @@ app.post('/api/upload-resume', upload.single('resume'), async (req, res) => {
 // Health check route
 app.get('/', (req, res) => {
     res.send('✅ Resume parsing backend is running!');
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 // Start the server
