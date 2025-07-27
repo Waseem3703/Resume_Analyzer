@@ -514,7 +514,7 @@ Now answer the user's question below based on this context:
           <button
             type="submit"
             disabled={loadingChat || !chatInput.trim()}
-            className={`px-5 py-2 rounded-lg text-white font-semibold transition-colors duration-200 ${
+            className={`px-5 py-2 rounded-lg text-white font-semibold transition-colors duration-200 cursor-pointer ${
               loadingChat || !chatInput.trim()
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-blue-600 hover:bg-blue-700"
