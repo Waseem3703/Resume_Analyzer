@@ -247,7 +247,8 @@ Now answer the user's question below based on this context:
 <div className="w-full md:px-30 space-y-6"> {/* Changed space-y-10 to space-y-6 */}
   
   {/* File Upload */}
-  <div className="w-full max-w-sm mx-auto text-center border border-dashed border-[#249a71] rounded-lg bg-gray-50 dark:bg-gray-800 p-6">
+  <div className="w-full max-w-lg mx-auto text-center border border-dashed border-[#249a71] rounded-lg bg-gray-50
+    p-6">
     <form className="space-y-4">
       <p className="text-sm text-gray-700 dark:text-white">
         Drop your resume here or click to upload.
@@ -260,7 +261,8 @@ Now answer the user's question below based on this context:
       {/* Styled Label that looks like a button */}
       <label
         htmlFor="resumeFile"
-        className="inline-block bg-[#249a71] text-white font-medium px-6 py-2 rounded cursor-pointer hover:bg-green-700 transition"
+        className="inline-block bg-[#249a71] text-white font-medium px-6 py-2 rounded 
+        cursor-pointer hover:bg-green-700 transition"
       >
         Upload Your Resume
       </label>
